@@ -69,7 +69,7 @@ python manage.py runserver
 ### Примеры запросов
 
 - POST http://127.0.0.1:8000/api/v1/api-token-auth/
-Запрос:
+
 ```
 {
     "username": "onee_user",
@@ -108,7 +108,7 @@ python manage.py runserver
 ```
 
 - GET http://127.0.0.1:8000/api/v1/groups/1/
-Результат:
+
 ```
 {
     "id": 1,
@@ -120,7 +120,6 @@ python manage.py runserver
 
 - POST http://127.0.0.1:8000/api/v1/posts/1/comments/
 
-Запрос:
 ```
 {
     "text": "Весьма интересный пост. Буду ждать еще",
