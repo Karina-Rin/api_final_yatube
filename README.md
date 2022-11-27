@@ -47,7 +47,7 @@ python -m venv env
 source env/bin/activate
 ```
 
-Установливаем зависимости из файла requirements.txt:
+Устанавливаем зависимости из файла requirements.txt:
 
 ```
 python -m pip install --upgrade pip
