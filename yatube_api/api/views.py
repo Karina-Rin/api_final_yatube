@@ -4,13 +4,18 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 from rest_framework import filters, mixins, viewsets
 from rest_framework.pagination import LimitOffsetPagination
-from rest_framework.permissions import (IsAuthenticated,
-                                        IsAuthenticatedOrReadOnly)
+from rest_framework.permissions import (
+    IsAuthenticated,
+    IsAuthenticatedOrReadOnly,
+)
 
 from api.permissions import IsAuthorOrReadOnly
-from api.serializers import (CommentSerializer, FollowSerializer,
-                             GroupSerializer, PostSerializer)
-
+from api.serializers import (
+    CommentSerializer,
+    FollowSerializer,
+    GroupSerializer,
+    PostSerializer,
+)
 from posts.models import Follow, Group, Post, User
 
 User = get_user_model()
