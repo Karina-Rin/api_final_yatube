@@ -27,6 +27,10 @@ API_final_yatube - это API для cоциальной сети Yatube, в к�
 хотим прокомментировать.
 - `api/v1/posts/{post_id}/comments/{comment_id}/` (GET, PUT, PATCH, DELETE): 
 получаем, редактируем или удаляем комментарий по id у поста с id=post_id.
+- `api/v1/follow/` (GET, POST): Возвращает все подписки пользователя, 
+сделавшего запрос. Анонимные запросы запрещены.
+- `api/v1/jwt/refresh/` (POST): Обновление JWT-токена.
+- `api/v1/jwt/verify/`(POST): Проверка JWT-токена.
 
 ### Запускаем проект:
 
@@ -79,8 +83,12 @@ python manage.py runserver
 Результат:
 ```
 {
-    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2OTc1MDA3NywianRpIjoiNjZkYTlmMzI3ZTU1NDhmZTg1MmIyZGIyMTJiYjA1OWUiLCJ1c2VyX2lkIjoxfQ.MSMEfXK_zszS1hXiGshr_Nz05l4sQnc4pjbdWqv20b4",
-    "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyMDgyODc3LCJqdGkiOiIyMTRkOTE0YTU3MjA0YmJkYTU3N2ZkYjRiZDZjMjlkZiIsInVzZXJfaWQiOjF9.yRQ5EtUpLyQ_tBwphlo1_9WoToZVVbRWjWkwuj_YMAE"
+    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9eyJ0b2tlbl90eXBlIjoicmVmcm
+    VzaCIsImV4cCI6MTY2OTc1MDA3NywianRpIjoiNjZkYTlmMzI3ZTU1NDhmZTg1MmIyZGIyMTJi
+    YjA1OWUiLCJ1c2VyX2lkIjoxfQ.MSMEfXK_zszS1hXiGshr_Nz05l4sQnc4pjbdWqv20b4",
+    "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNj
+    ZXNzIiwiZXhwIjoxNjcyMDgyODc3LCJqdGkiOiIyMTRkOTE0YTU3MjA0YmJkYTU3N2ZkYjRiZDZ
+    jMjlkZiIsInVzZXJfaWQiOjF9.yRQ5EtUpLyQ_tBwphlo1_9WoToZVVbRWjWkwuj_YMAE"
 }
 ```
 
