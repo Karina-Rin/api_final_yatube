@@ -68,7 +68,7 @@ python manage.py runserver
 
 ### Примеры запросов
 
-- POST http://127.0.0.1:8000/api/v1/api-token-auth/
+- POST http://127.0.0.1:8000/api/v1/jwt/create/
 
 ```
 {
@@ -79,9 +79,8 @@ python manage.py runserver
 Результат:
 ```
 {
-    "email": "",
-    "username": "onee_user",
-    "id": 1
+    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2OTc1MDA3NywianRpIjoiNjZkYTlmMzI3ZTU1NDhmZTg1MmIyZGIyMTJiYjA1OWUiLCJ1c2VyX2lkIjoxfQ.MSMEfXK_zszS1hXiGshr_Nz05l4sQnc4pjbdWqv20b4",
+    "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyMDgyODc3LCJqdGkiOiIyMTRkOTE0YTU3MjA0YmJkYTU3N2ZkYjRiZDZjMjlkZiIsInVzZXJfaWQiOjF9.yRQ5EtUpLyQ_tBwphlo1_9WoToZVVbRWjWkwuj_YMAE"
 }
 ```
 
